@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+<h2>Register a bean below, or create it if and only if you dine with the gods:</h2>
+
+<br><br>
+{% block content %}
+
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+
+	<form action="{%url 'ingredients:bean' %}" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{form|crispy}}
+		<input type="submit" value="Create Post">
+	</form>
+	 </div>
+	</div>
+
+
+
+
+
+{% endblock content %}

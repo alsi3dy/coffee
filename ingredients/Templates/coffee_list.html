@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %} 
+
+<h1>List of Coffees:</h1>
+<br><br><br>
+
+
+{% for iter in coffee_list %}
+
+{{iter.name}}
+{{iter.id}}
+<br><br>
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

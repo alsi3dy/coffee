@@ -1,0 +1,37 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+{{obj.name}}
+<br>
+{{obj.bean}}
+<br>
+{{obj.roast}}
+<br>
+{% for syrup in obj.syrup.all %}
+
+{{syrup.title}}
+
+
+
+{% endfor %} 
+<br>
+{% for powder in obj.powder.all %}
+
+{{powder.title}}
+
+
+
+{% endfor %} 
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
